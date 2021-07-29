@@ -60,8 +60,28 @@
             </tbody>
         </table>
         {{-- {{ route('students.create') }} go to create function in controller --}}
+        {{-- pagination --}}
+        <div class="page">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>  
         <a href="{{ route('students.create') }}" class="btn btn-primary">Add Student</a>
-    </div>
+    </div> 
+
+
+
+
 
     {{-- modal for editing student info --}}
     <div class="modal fade" tabindex="-1" aria-hidden="true" id="editStudent">

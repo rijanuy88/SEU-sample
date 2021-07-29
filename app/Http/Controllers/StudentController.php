@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 // import student model
 use App\Models\Student;
-
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -30,8 +31,13 @@ class StudentController extends Controller
         return view('students.studentList',[
             // $studentList var name in controller
             // 'students' var name in view
-            'studentlist' => $studentList
+            'studentlist' => $studentList,
+            'studentlist' => DB::table('students')->paginate(15)
         ]);
+
+        // $students = DB::table('students')->paginate(15);
+
+        // return view('students.student', ['students' => $students]);
     }
 
     /**
@@ -134,4 +140,5 @@ class StudentController extends Controller
         $deletestudent->delete();
         return redirect()->route('students.index');
     }
+
 }
