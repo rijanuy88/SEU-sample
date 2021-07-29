@@ -23,6 +23,7 @@
                 <th scope="col">First Name</th>
                 <th scope="col">Middle Name</th>
                 <th scope="col">Last Name</th>
+                <th scope="col">Address</th>
                 <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -35,6 +36,7 @@
                         <td>{{ $student->firstName }}</td>
                         <td>{{ $student->middleName }}</td>
                         <td>{{ $student->lastName }}</td>
+                        <td>{{ $student->address }}</td>
                         <td>
                             {{-- pass info in modal --}}
                             <button id="edit-modal"type="button" class="edit-modal btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#editStudent" 
